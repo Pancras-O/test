@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Name - Homepage</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/images/">
+</head>
+<body>
+  <header>
+    <img src="css/images/logo.jpg" alt="Hospital Logo" class="logo">
+    <style>
+        .logo {
+  width: 100px; /* Adjust width to desired size */
+  height: 50; /* Maintains aspect ratio */
+  border-radius: 50px;
+}
+    </style>
+    <h1>Welcome to Zulphy's Hospital</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html"><strong>Home</strong></a></li>
+            <li><a href="about.html"><strong>About Us</strong></a></li>
+            <li><a href="services.html"><strong>Services</strong></a></li>
+            <li><a href="contact.html"><strong>Contact</strong></a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+  <section>
+      <h2>Quality Healthcare at Your Service</h2>
+      <p>Providing comprehensive medical care with compassion and expertise.</p>
+  </section>
+  <!--images codes starts from here-->
+  <section id="slider">
+    <div class="slide">
+        <img src="css/images/front part3.jpg" alt="Welcome to Our Hospital">
+    </div>
+    <div class="slide">
+        <img src="css/images/equipment.jpg" alt="State-of-the-art Facilities">
+    </div>
+    <div class="slide">
+        <img src="css/images/community.jpg" alt="Caring for the Community">
+    </div>
+</section>
+
+</main>
+<footer id="footer">
+  <div class="footer-content">
+      <p>&copy; 2024 Zulphy's Hospital. All rights reserved.</p>
+      <div class="footer-contact">
+          <p><strong>Contact Us:</strong></p>
+          <p>Phone: (123) 456-7890</p>
+          <p>Email: info@zulphyshospital.com</p>
+          <p>Address: 123 Health</p>
+      </div>
+      <div class="footer-social">
+          <a href="https://facebook.com/zulphy'shospital" target="_blank">Facebook</a>
+          <a href="https://twitter.com/zulphy'shospital" target="_blank">Twitter</a>
+          <a href="https://instagram.com/zulphy'shospital" target="_blank">Instagram</a>
+      </div>
+  </div>
+</footer>
+
+
+<!--JavaScript starts here-->
+<script>
+  const slides = document.querySelectorAll("#slider .slide");
+  let currentSlide = 0;
+
+  function showNextSlide() {
+      // Hide the current slide
+      slides[currentSlide].classList.remove("active");
+
+      // Move to the next slide (or loop back to the first)
+      currentSlide = (currentSlide + 1) % slides.length;
+
+      // Show the next slide
+      slides[currentSlide].classList.add("active");
+  }
+
+  // Initialize the first slide as active
+  slides[currentSlide].classList.add("active");
+
+  // Change slides every 3 seconds
+  setInterval(showNextSlide, 3000);
+</script>
+
+</body>
+</html>

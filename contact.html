@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Zulphy's Hospital</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="css/images/logo.jpg" alt="Hospital Logo" class="logo">
+        <style>
+            .logo {
+      width: 100px; /* Adjust width to desired size */
+      height: 50; /* Maintains aspect ratio */
+      border-radius: 50px;
+    }
+        </style>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"><strong>Home</strong></a></li>
+                <li><a href="about.html"></a><strong>About Us</strong></a></li>
+                <li><a href="services.html"><strong>Services</strong></a></li>
+                <li><a href="contact.html"><strong>Contact</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+      <!--
+        <section>
+            <h2>Get in Touch</h2>
+            <p>If you have any questions or would like to book an appointment, feel free to contact us.</p>
+        </section>
+        <section>
+            <h3>Contact Details</h3>
+            <p><strong>Phone:</strong> +254 712 345 678</p>
+            <p><strong>Email:</strong> info@zulphy'shospital.com</p>
+            <p><strong>Address:</strong> 123 Health Avenue, Kisumu, Kenya</p>
+        </section>
+        <section>
+            <h3>Contact Form</h3>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <br>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+      -->
+
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <h2 class="section-title">Contact Us</h2>
+          <p class="section-subtitle">Have questions or need assistance? Get in touch with us.</p>
+          <form class="contact-form" action="#" method="post">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+              <label for="inquiry-type">Type of Inquiry</label>
+              <select id="inquiry-type" name="inquiry-type" required>
+                  <option value="">Select Inquiry Type</option>
+                  <option value="appointment">Appointment</option>
+                  <option value="general-inquiry">General Inquiry</option>
+                  <option value="emergency">Emergency</option>
+              </select>
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+      
+    <!--Appointment Booking Form-->
+
+    <section id="appointment">
+      <h2>Book an Appointment</h2>
+      <form id="appointment-form">
+          <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+              <label for="doctor">Select a Doctor</label>
+              <select id="doctor" name="doctor" required>
+                  <option value="">Choose a Doctor</option>
+                  <option value="dr-smith">Dr. Smith - Cardiologist</option>
+                  <option value="dr-jones">Dr. Jones - Pediatrician</option>
+                  <option value="dr-williams">Dr. Williams - Dermatologist</option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label for="appointment-date">Select Date</label>
+              <input type="date" id="appointment-date" name="appointment-date" required>
+          </div>
+          <div class="form-group">
+              <label for="appointment-time">Select Time</label>
+              <input type="time" id="appointment-time" name="appointment-time" required>
+          </div>
+          <button type="submit">Book Appointment</button>
+      </form>
+  </section>
+  
+    </main>
+    <footer id="footer">
+      <div class="footer-content">
+          <p>&copy; 2024 Zulphy's Hospital. All rights reserved.</p>
+          <div class="footer-contact">
+              <p><strong>Contact Us:</strong></p>
+              <p>Phone: (123) 456-7890</p>
+              <p>Email: info@zulphyshospital.com</p>
+              <p>Address: 123 Health</p>
+          </div>
+          <div class="footer-social">
+              <a href="https://facebook.com/zulphy'shospital" target="_blank">Facebook</a>
+              <a href="https://twitter.com/zulphy'shospital" target="_blank">Twitter</a>
+              <a href="https://instagram.com/zulphy'shospital" target="_blank">Instagram</a>
+          </div>
+      </div>
+    </footer>
+
+    <!--JavaScript starts here-->
+    <script>
+      //For sending a message
+      document.querySelector("form").addEventListener("submit", function(event) {
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const message = document.getElementById("message").value.trim();
+          let error = "";
+    
+          if (name === "") {
+              error += "Name is required.\n";
+          }
+          if (!/\S+@\S+\.\S+/.test(email)) {
+              error += "Enter a valid email address.\n";
+          }
+          if (message === "") {
+              error += "Message cannot be empty.\n";
+          }
+    
+          if (error) {
+              alert(error);
+              event.preventDefault(); // Prevent form submission
+          }
+      });
+
+      //For booking an appointment
+    const appointmentForm = document.getElementById('appointment-form');
+
+    appointmentForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const doctor = document.getElementById('doctor').value;
+        const date = document.getElementById('appointment-date').value;
+        const time = document.getElementById('appointment-time').value;
+
+        if (name && email && doctor && date && time) {
+            alert("Your appointment has been booked successfully!");
+            appointmentForm.reset();
+        } else {
+            alert("Please fill out all fields before submitting.");
+        }
+    });
+    </script>
+</body>
+</html>

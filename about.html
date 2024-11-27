@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Zulphy's Hospital</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="css/images/logo.jpg" alt="Hospital Logo" class="logo">
+        <style>
+            .logo {
+      width: 100px; /* Adjust width to desired size */
+      height: 50; /* Maintains aspect ratio */
+      border-radius: 50px;
+    }
+        </style>
+        <h1>About Zulphy's Hospital</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Our Mission</h2>
+            <p>To provide exceptional healthcare services with compassion and integrity.</p>
+        </section>
+        <section>
+            <h2>Our Vision</h2>
+            <p>To be the leading provider of healthcare solutions in the region.</p>
+        </section>
+        <section>
+            <h2>Our History</h2>
+            <p>Zulphy's Hospital was established in [Year] and has since been dedicated to improving the lives of our community through quality healthcare.</p>
+        </section>
+    </main>
+    <footer id="footer">
+      <div class="footer-content">
+          <p>&copy; 2024 Zulphy's Hospital. All rights reserved.</p>
+          <div class="footer-contact">
+              <p><strong>Contact Us:</strong></p>
+              <p>Phone: (123) 456-7890</p>
+              <p>Email: info@zulphyshospital.com</p>
+              <p>Address: 123 Health</p>
+          </div>
+          <div class="footer-social">
+              <a href="https://facebook.com/zulphy'shospital" target="_blank">Facebook</a>
+              <a href="https://twitter.com/zulphy'shospital" target="_blank">Twitter</a>
+              <a href="https://instagram.com/zulphy'shospital" target="_blank">Instagram</a>
+          </div>
+      </div>
+    </footer>
+</body>
+<script>
+  const links = document.querySelectorAll("nav a");
+  links.forEach(link => {
+      if (link.href === window.location.href) {
+          link.style.color = "blue"; // Highlight active link
+          link.style.fontWeight = "bold";
+      }
+  });
+</script>
+
+</html>
